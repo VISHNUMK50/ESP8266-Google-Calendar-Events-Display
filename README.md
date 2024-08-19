@@ -43,7 +43,7 @@ Here’s how you can connect the components:
 1. **Clone or Download the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/esp8266-google-calendar-display.git
+   git clone https://github.com/VISHNUMK50/ESP8266-Google-Calendar-Events-Display.git
    ```
 2. **Configure Wi-Fi Credentials:**
   In the .ino file, replace the placeholders with your Wi-Fi SSID and password:
