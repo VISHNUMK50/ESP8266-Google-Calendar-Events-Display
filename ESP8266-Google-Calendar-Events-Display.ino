@@ -14,8 +14,8 @@
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // Wi-Fi credentials
-const char* ssid = "Rotech_2.4G";
-const char* password = "rotech@AI";
+const char* ssid = "Your_SSID";
+const char* password = "Your_Password";
 
 // NTP server for time synchronization
 const char* ntpServer = "pool.ntp.org";
@@ -121,7 +121,10 @@ void updateCalendarEvents() {
     Serial.println("Current time in RFC3339 format: " + currentTime);
 
     // Construct the calendar URL with dynamic timeMin and timeMax
-    String calendarUrl = "https://www.googleapis.com/calendar/v3/calendars/rotechedukerala@gmail.com/events?timeMin=" + currentTime + "&timeMax=" + getEndOfDayTimeRFC3339() + "&orderBy=startTime&singleEvents=true&key=AIzaSyDMcqZqkTAXMOlMM1WfnDtQfaNoNflwSbs";
+
+    //  Replace "YOUR_API_KEY" with your API KEY.
+    //  Replace "your-calendar-id" with your calendar id.
+    String calendarUrl = "https://www.googleapis.com/calendar/v3/calendars/your-calendar-id/events?timeMin=" + currentTime + "&timeMax=" + getEndOfDayTimeRFC3339() + "&orderBy=startTime&singleEvents=true&key=YOUR_API_KEY";
 
     Serial.println(calendarUrl);
 
